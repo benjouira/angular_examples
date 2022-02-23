@@ -1,0 +1,38 @@
+<app-vertical-nav-bar></app-vertical-nav-bar>
+
+<div class="row" *ngIf="active" >
+    <b>Welcom {{firstName}}</b>
+</div>
+<div class="row">
+    <button class="btn btn-link" (click)="showHide()" >show/Hide</button>
+</div>
+<div class="row">
+    <button class="btn btn-link" (click)="goToUser()" >Go to register</button>
+</div>
+<br>
+<div class="row ">
+    <table class="table m-5 table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Name</th>
+                <th>Country Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let item of userList">
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_Name}}</td>
+            <td>{{item.job}}</td>
+            <td>{{item.country}}</td>
+            <td><i class="fa-solid fa-user"></i></td>
+        </tr>
+    </table>
+</div>
+<div  [ngClass]="{'c1': class1,'c2': class2}">
+    <div [ngSwitch]="active" >
+        <div *ngSwitchCase="true">Show</div>
+        <div *ngSwitchCase="false">Hide</div>
+    </div>
+</div>
