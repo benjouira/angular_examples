@@ -8,6 +8,13 @@ import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { VerticalNavBarComponent } from './vertical-nav-bar/vertical-nav-bar.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ObservableTestComponent } from './components/observable-test/observable-test.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { FormTestComponent } from './components/form-test/form-test.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +22,14 @@ import { VerticalNavBarComponent } from './vertical-nav-bar/vertical-nav-bar.com
     UserComponent,
     RegisterComponent,
     HeaderComponent,
-    VerticalNavBarComponent
+    VerticalNavBarComponent,
+    ParentComponent,
+    ChildComponent,
+    ProductsComponent,
+    ObservableTestComponent,
+    PipeComponent,
+    FormTestComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
