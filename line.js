@@ -22,3 +22,38 @@ const chart = new Chart(ctx, {
         }
     }
 })
+
+options: {
+  scales: {
+    xAxes: [{
+      id: 'x',
+      type: 'time',
+      display: true,
+      title: {
+        display: true,
+        text: 'Date'
+      },
+      ticks: {
+        major: {
+          enabled: true
+        },
+        font: function(context) {
+          if (context.tick && context.tick.major) {
+            return {
+              weight: 'bold',
+              color: '#FF0000'
+            };
+          }
+        }
+      }
+    }],
+    yAxes: [{
+      id: 'y',
+      display: true,
+      title: {
+        display: true,
+        text: 'value'
+      }
+    }]
+  }
+}
